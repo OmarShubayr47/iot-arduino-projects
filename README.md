@@ -3,15 +3,18 @@
 My hands-on IoT learning journey — from basics to connected smart systems.
 
 ## Track
-Arduino → Sensors → ESP32 → WiFi → MQTT → Cloud → Smart Systems
+Arduino → Sensors → Actuators → ESP32 → WiFi → MQTT → Cloud → Smart Systems
 
 ## Projects
 
 | # | Project | Concepts |
 |---|---------|----------|
-| 01 | Blink | Digital output, setup/loop |
-| 02 | Button + LED | Digital input, conditionals |
-| 03 | DHT11 Monitor | Sensor reading, serial output, threshold alerts |
+| 01 | Blink | Digital output, setup/loop structure |
+| 02 | Button + LED | Digital input, conditionals, Serial Monitor |
+| 03 | DHT11 Monitor | Sensor reading, threshold alerts, heat index |
+| 04 | Sound Sensor (KY-037) | Analog vs digital output, sensitivity tuning |
+| 05 | Joystick Servo (Jitter Fixed) | ADC smoothing, dead zone, millis() timing |
+| 06 | Potentiometer Servo + Button | Analog mapping, INPUT_PULLUP, filtering |
 
 ## Tools
 - Arduino Uno
