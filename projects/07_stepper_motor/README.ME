@@ -1,0 +1,64 @@
+# 07 - Stepper Motor Control (3 Modes)
+
+## What it does
+Controls a 28BYJ-48 stepper motor using three input modes.
+A mode button cycles between Potentiometer, Joystick, and Button Step control.
+Current mode and motor status are printed to Serial Monitor in real time.
+
+## Hardware
+- Arduino Uno
+- 28BYJ-48 Stepper Motor
+- ULN2003AN Driver Board
+- Potentiometer
+- HW-504 Joystick Module
+- 3x Push Buttons
+- Jumper wires
+
+## Wiring
+
+### ULN2003 Driver → Arduino
+| ULN2003 Pin | Arduino Pin |
+|-------------|-------------|
+| IN1         | Pin 8       |
+| IN2         | Pin 9       |
+| IN3         | Pin 10      |
+| IN4         | Pin 11      |
+| VCC         | 5V          |
+| GND         | GND         |
+
+### Controls
+| Component              | Arduino Pin |
+|------------------------|-------------|
+| Potentiometer wiper    | A0          |
+| Joystick VRx           | A1          |
+| Mode button            | Pin 2       |
+| Step Forward button    | Pin 3       |
+| Step Backward button   | Pin 4       |
+
+## Modes
+
+### Mode 1 — Potentiometer
+Left of center = rotate backward, speed increases further left.
+Right of center = rotate forward, speed increases further right.
+Center dead zone = motor stopped.
+
+### Mode 2 — Joystick
+Push right = forward, push left = backward.
+Distance from center controls speed.
+Dead zone at center stops the motor.
+
+### Mode 3 — Button Steps
+Forward button = 512 steps forward (quarter turn).
+Backward button = 512 steps backward (quarter turn).
+Step sequences complete before accepting new input.
+
+## Concepts Learned
+- Stepper motor vs servo motor — precise step control vs angle control
+- ULN2003 driver board operation
+- Multi-mode control logic using a single cycle button
+- Speed mapping from analog input to RPM
+- Blocking vs non-blocking movement trade-offs
+- millis() debouncing across multiple buttons simultaneously
+
+## Library Used
+- Arduino built-in Stepper library 

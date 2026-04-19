@@ -15,6 +15,7 @@ Arduino → Sensors → Actuators → ESP32 → WiFi → MQTT → Cloud → Smar
 | 04 | Sound Sensor (KY-037) | Analog vs digital output, sensitivity tuning |
 | 05 | Joystick Servo (Jitter Fixed) | ADC smoothing, dead zone, millis() timing |
 | 06 | Potentiometer Servo + Button | Analog mapping, INPUT_PULLUP, filtering |
+| 07 | Stepper Motor — 3 Modes | Stepper control, ULN2003 driver, multi-mode input, speed mapping |
 
 ## Tools
 - Arduino Uno
